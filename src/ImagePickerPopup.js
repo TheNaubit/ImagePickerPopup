@@ -174,6 +174,14 @@ class ImagePickerPopup {
   // registerClickListenerOnImages() once you have added all
   // of them
   addImage(src, alt) {
+
+    if(src===null || src===undefined || src===''){
+      if(this.debug){
+        console.warn("You can not add an image with that src!");
+        return;
+      }
+    }
+
     var tmpGridItem = document.createElement("div");
     tmpGridItem.className += "grid-item";
     var tmpImgItem = document.createElement("img");
