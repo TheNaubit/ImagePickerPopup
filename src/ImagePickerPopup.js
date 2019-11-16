@@ -1,6 +1,6 @@
 class ImagePickerPopup {
   // This is the constructor
-  // It accepts 4 args
+  // It accepts 5 args
   // containerID is required and it is the ID of the empty div in your html
   // where you want to place the Image Picker
   // onImageSelected is optional and if set it must be a function to be called
@@ -9,7 +9,9 @@ class ImagePickerPopup {
   // to be called once the user clicks on the close button (so it doesn't select anything)
   // debug is optional and if it is set to true it will show console messages when running
   // this; in any other case it won't show console messages
-  constructor(containerID, onImageSelected, onCancelledSelector, debug) {
+  // useFAS is optional and if it is set to true it will use Font Awesome CSS for the close
+  // button icon instead using Friconix css. If not set it will use Friconix css
+  constructor(containerID, onImageSelected, onCancelledSelector, debug, useFAS) {
     // First we set the initial vars
     this.onImageSelected = onImageSelected;
     this.onCancelledSelector = onCancelledSelector;
@@ -19,6 +21,13 @@ class ImagePickerPopup {
       this.debug=true;
     }else{
       this.debug=false;
+    }
+
+    // Just if you want to use Font Awesome and not Friconix
+    if(useFAS===true){
+      this.useFAS=true;
+    }else{
+      this.useFAS=false;
     }
 
     this.generateImagePicker(containerID, false);
@@ -233,11 +242,12 @@ class ImagePickerPopup {
       this.closeButton = document.createElement("span");
       this.closeButton.className += "closeButton";
       var closeButtonIcon = document.createElement("i");
-      // This is to support Font Awesome (uncomment this and comment next Friconix line)
-      /*closeButtonIcon.className += "fas";
-      closeButtonIcon.className += " fa-times";*/
-      // And this to support Friconix (uncomment this and comment previous Font Awesome lines)
-      closeButtonIcon.className += "fi-xwluxl-times-wide";
+      if(this.useFAS===true){
+        closeButtonIcon.className += "fas";
+        closeButtonIcon.className += " fa-times";
+      }else{
+        closeButtonIcon.className += "fi-xwluxl-times-wide";
+      }
       this.closeButton.appendChild(closeButtonIcon);
       this.imagePopupWindow.appendChild(this.closeButton);
     }
