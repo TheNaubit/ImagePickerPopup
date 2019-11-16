@@ -1,0 +1,60 @@
+div.imagePopupWindow {
+  background-color: #000000c2;
+  z-index: 99999999;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  display: none;
+}
+
+div.imagePopupWindow span.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+}
+
+div.imagePopupWindow .grid {
+  margin-top: 50px;
+}
+
+div.imagePopupWindow .grid :after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div.imagePopupWindow .grid .grid-sizer,
+div.imagePopupWindow .grid .grid-item {
+  width: 50%;
+}
+
+div.imagePopupWindow .grid .grid-item {
+  float: left;
+}
+
+div.imagePopupWindow .grid .grid-item :hover {
+  width: 90%;
+  margin-top: 13px;
+  margin-left: 15px;
+}
+
+div.imagePopupWindow .grid .grid-item img {
+  display: block;
+  max-width: 100%;
+}
+/*# sourceMappingURL=ImagePickerPopup.css.map */
