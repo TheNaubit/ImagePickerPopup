@@ -15,9 +15,12 @@
 - [So, what are the arguments you can set when creating a new ImagePickerPopup object?](#so-what-are-the-arguments-you-can-set-when-creating-a-new-imagepickerpopup-object)
 - [How to reset the Image Picker?](#how-to-reset-the-image-picker)
 - [How to use Font Awesome instead Friconix?](#how-to-use-font-awesome-instead-friconix)
+- [Can I redraw the layout?](#can-i-redraw-the-layout)
  
 ## What is this repo?
 I was working in the project of one client and I need a basic Image Picker popup window. I tried to find a library on the Internet since I couldn't spend a lot of time on that since it was just a minor update.
+
+And if you are wondering if it is mobile responsive, it should. I have done some tests and it worked without problems.
 
 But I didn't find anything. Well, a few, but they didn't fit what I wanted. So I created this one.
 
@@ -203,4 +206,13 @@ var imagePicker = new ImagePickerPopup(
   true
 ); 
 ```
-**Notice the last argument is set to true!** It will tell to ImagePickerPopup class to use Font Awesome. 
+**Notice the last argument is set to true!** It will tell to ImagePickerPopup class to use Font Awesome.
+
+## Can I redraw the layout?
+Yes. Maybe you are coding something that it changes the page size all time. In that case maybe the Image Picker won't fill the screen or it will have some visual glitches.
+
+Then you can force the Image Picker to get again the right size and redraw itself with this method:
+```JS
+imagePicker.masonry.layout();
+```
+**And done!**
