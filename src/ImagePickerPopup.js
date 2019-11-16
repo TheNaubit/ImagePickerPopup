@@ -261,7 +261,7 @@ class ImagePickerPopup {
     // They are stored in the main div (this.imagePopupWindow)
     // In a data-path array
     this.images = JSON.parse(this.imagePopupWindow.getAttribute("data-path"));
-    if (this.images === undefined || this.images.length <= 0) {
+    if (this.images === undefined || this.images === null || this.images.length <= 0) {
       if(this.debug){
         console.log("No initial images loaded!");
       }
