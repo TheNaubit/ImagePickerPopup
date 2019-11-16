@@ -3,6 +3,17 @@
 ## Content
 - [What is this repo?](#what-is-this-repo)
 - [Dependencies?](#dependencies)
+- [Installation](#installation)
+- [How to show the image picker?](#how-to-show-the-image-picker)
+- [How to add images to the Image Picker?](#how-to-add-images-to-the-image-picker)
+  - [Using data- attributes](#using-data--attributes)
+    - [data-path](#data-path)
+    - [data-alt](#data-alt)
+  - [Using addImage function](#using-addimage-function)
+- [What if I want to close the Image Picker Window?](#what-if-i-want-to-close-the-image-picker-window)
+- [So, what are the arguments you can set when creating a new ImagePickerPopup object?](#so-what-are-the-arguments-you-can-set-when-creating-a-new-imagepickerpopup-object)
+- [How to reset the Image Picker?](#how-to-reset-the-image-picker)
+- [How to use Font Awesome instead Friconix?](#how-to-use-font-awesome-instead-friconix)
  
 ## What is this repo?
 I was working in the project of one client and I need a basic Image Picker popup window. I tried to find a library on the Internet since I couldn't spend a lot of time on that since it was just a minor update.
