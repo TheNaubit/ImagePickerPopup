@@ -31,7 +31,7 @@ I coded it using **Vanilla JS** (it means, the classic Javascript, no jQuery) an
 
 If you find any problem, just report the issue and I will try to find the error. For older browsers (mostly IE7 and things like that), it maybe works but I have to do several more tests.
 
-This library uses two other libraries: [Masonry Layout](https://github.com/desandro/masonry) and [ImagesLoaded](https://github.com/desandro/imagesloaded), both by the same author, Desandro, so **a big thanks to him**! (And don't forget to check his projects).
+This library uses two other libraries: [Masonry Layout](https://github.com/desandro/masonry) and [ImagesLoaded](https://github.com/desandro/imagesloaded), both by the same author, [David DeSandro](https://github.com/desandro), so **a big thanks to him**! (And don't forget to check his projects).
 
 Apart those libraries, it needs to show a close icon so you should add Friconix dependecy (or Font Awesome, as you prefer). More about it in the Installation section.
 
