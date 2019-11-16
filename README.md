@@ -227,5 +227,5 @@ imagePicker.masonry.layout();
 
 ## License
 Image Picker Popup is released under the **MIT license**.
----
+___
 Made by Alberto Del Águila
