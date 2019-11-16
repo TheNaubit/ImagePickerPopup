@@ -4,6 +4,7 @@
 - [What is this repo?](#what-is-this-repo)
 - [Dependencies?](#dependencies)
 - [Installation](#installation)
+- [Demo](#demo)
 - [How to show the image picker?](#how-to-show-the-image-picker)
 - [How to add images to the Image Picker?](#how-to-add-images-to-the-image-picker)
   - [Using data- attributes](#using-data--attributes)
@@ -80,6 +81,9 @@ Now just go to the first line after the body tag in your HTML file and add a div
   </script>
 </body>
 ```
+
+## Demo
+I created a little and basic demo, you can [check the demo here](https://codepen.io/nautadev/full/qBBQGmb).
 
 ## How to show the image picker?
 Well, if you have installed it and you have already created a new ImagePickerPopup object (like I did in the example with the imagePicker var), you can call this javascript method from anywhere:
