@@ -16,6 +16,8 @@
 - [How to reset the Image Picker?](#how-to-reset-the-image-picker)
 - [How to use Font Awesome instead Friconix?](#how-to-use-font-awesome-instead-friconix)
 - [Can I redraw the layout?](#can-i-redraw-the-layout)
+- [Browser Support](#browser-support)
+- [License](#license)
  
 ## What is this repo?
 I was working in the project of one client and I need a basic Image Picker popup window. I tried to find a library on the Internet since I couldn't spend a lot of time on that since it was just a minor update.
@@ -216,3 +218,14 @@ Then you can force the Image Picker to get again the right size and redraw itsel
 imagePicker.masonry.layout();
 ```
 **And done!**
+
+## Browser support
+- IE9+
+- Android 2.3+
+- iOS Safari 4+
+- All other modern browsers
+
+## License
+Image Picker Popup is released under the **MIT license**.
+---
+Made by Alberto Del Águila
