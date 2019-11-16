@@ -233,11 +233,11 @@ class ImagePickerPopup {
       this.closeButton = document.createElement("span");
       this.closeButton.className += "closeButton";
       var closeButtonIcon = document.createElement("i");
-      // This is to support Font Awesome
-      closeButtonIcon.className += "fas";
-      closeButtonIcon.className += " fa-times";
-      // And this to support Friconix
-      closeButtonIcon.className += " fi-xwluxl-times-wide";
+      // This is to support Font Awesome (uncomment this and comment next Friconix line)
+      /*closeButtonIcon.className += "fas";
+      closeButtonIcon.className += " fa-times";*/
+      // And this to support Friconix (uncomment this and comment previous Font Awesome lines)
+      closeButtonIcon.className += "fi-xwluxl-times-wide";
       this.closeButton.appendChild(closeButtonIcon);
       this.imagePopupWindow.appendChild(this.closeButton);
     }
