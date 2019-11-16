@@ -273,7 +273,7 @@ class ImagePickerPopup {
     // So we have to get them (they are stored in the main div in a data-alt array)
     // It is optional, so maybe it doesn't exist
     this.altImages = JSON.parse(this.imagePopupWindow.getAttribute("data-alt"));
-    if (this.altImages === undefined || this.altImages.length <= 0) {
+    if (this.altImages === undefined || this.altImages === null || this.altImages.length <= 0) {
       if(this.debug){
         console.log("No initial alt images loaded!");
       }
