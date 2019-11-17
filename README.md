@@ -64,10 +64,10 @@ Again, you can replace the 1.0.0 for the version you want to use or 'latest':
 <script src="https://cdn.jsdelivr.net/gh/NauCode/ImagePickerPopup@latest/src/ImagePickerPopup.min.js"></script>
 ```
 
-Now just go to the first line after the body tag in your HTML file and add a div with an ID (for example 'imagePickupContainer'). Like this:
+Now just go to the first line after the body tag in your HTML file and add a div with an ID (for example 'imagePickerContainer'). Like this:
 ```HTML
 <body>
-  <div id="imagePickupContainer"></div>
+  <div id="imagePickerContainer"></div>
   ..... the rest of your HTML
 </body>
 ```
@@ -77,7 +77,7 @@ Now just go to the first line after the body tag in your HTML file and add a div
 <body>
   ..... the rest of your HTML
   <script>
-    var imagePicker = new ImagePickerPopup("imagePickupContainer",function(src,alt){
+    var imagePicker = new ImagePickerPopup("imagePickerContainer",function(src,alt){
         alert('You selected an image with URL '+src+' and alt text '+alt);
         imagePicker.closePopup(true);
       }, function(){
@@ -99,7 +99,7 @@ imagePicker.openPopup();
 ## How to add images to the Image Picker?
 You have two ways:
 ### Using data- attributes
-Do you remember when you have created that empty div with an ID (in the example it was 'imagePickupContainer')? Well, you could add to the div two data- attributes:
+Do you remember when you have created that empty div with an ID (in the example it was 'imagePickerContainer')? Well, you could add to the div two data- attributes:
 - data-path
 - data-alt
 
@@ -107,7 +107,7 @@ Do you remember when you have created that empty div with an ID (in the example 
 That attribute is an array with the links to the images. For example:
 ```HTML
 <body>
-  <div id="imagePickupContainer" data-path='["https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"]'></div>
+  <div id="imagePickerContainer" data-path='["https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"]'></div>
   ..... the rest of your HTML
 </body>
 ```
@@ -116,7 +116,7 @@ That attribute is an array with the links to the images. For example:
 That attribute is an array with the alt text for the images. It is optional and you **don't** need to add an alt text for every image you add to the picker. For example:
 ```HTML
 <body>
-  <div id="imagePickupContainer" data-path='["https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"]' data-alt='["First image alt text","","Third image alt text"]'></div>
+  <div id="imagePickerContainer" data-path='["https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg","https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg"]' data-alt='["First image alt text","","Third image alt text"]'></div>
   ..... the rest of your HTML
 </body>
 ```
@@ -139,7 +139,7 @@ Ok, ok, maybe you want to do it by code. Just call the closePopup() method:
 ```JS
 imagePicker.closePopup();
 ```
-Calling the method like that is the same as if you click the close button, **it also fires the function you define to be called when the user cancel the image selection!*.
+Calling the method like that is the same as if you click the close button, **it also fires the function you define to be called when the user cancel the image selection!**.
 
 So, what if you want to close the popup without firing the "cancelled selection" function? For example, how can you close the popup after the user selects an image?
 Easy:
@@ -151,7 +151,7 @@ Yes! Just that, add a true var in the arguments and done, it won't fire the "can
 ## So, what are the arguments you can set when creating a new ImagePickerPopup object?
 You only need one, the ID of the empty div you created.
 ```JS
-var imagePicker = new ImagePickerPopup("imagePickupContainer"); 
+var imagePicker = new ImagePickerPopup("imagePickerContainer"); 
 ```
 **Yes, that's all!**
 But in reality there are 5 arguments you can set:
@@ -173,7 +173,7 @@ Let's go one by one:
 
 So, this is an example of the constructor being called with several arguments:
 ```JS
-var imagePicker = new ImagePickerPopup("imagePickupContainer",function(src,alt){
+var imagePicker = new ImagePickerPopup("imagePickerContainer",function(src,alt){
         alert('You selected an image with URL '+src+' and alt text '+alt);
         imagePicker.closePopup(true);
       }, function(){
@@ -188,7 +188,7 @@ imagePicker.generateImagePicker(containerID, true);
 ``` 
 So in our example div, it would be:
 ```JS
-imagePicker.generateImagePicker("imagePickupContainer", true);
+imagePicker.generateImagePicker("imagePickerContainer", true);
 ``` 
 Keep in mind the second argument is the key to reset it! **Don't set it to false** since then it will use the previous images it has stored!
 
